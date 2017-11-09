@@ -9,10 +9,10 @@ Amp = Data[:,5]
 noise = np.random.normal(0,0.001,10000)
 
 
-n=len(noise)
+n=len(Time)
 dt=2.5/1000000000000
 nu=np.fft.fftfreq(n,dt)
-fk=np.fft.fft(noise/n)
+fk=np.fft.fft(Amp/n)
 
 plt.plot(nu,fk.real,'r')
 plt.show()
